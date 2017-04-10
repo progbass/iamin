@@ -1,0 +1,343 @@
+section#work{
+	color:  #FFF;
+	background: #000;
+
+	////////////////////////
+	// ICON TOP
+	&:before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 2em; right: 1em;
+		width: 20px; height: 51px;
+		background: url('../images/icon_top_skills.png') no-repeat;
+		background-size: contain;
+	}
+
+
+	.index_holder{
+		// ICON TOP
+		&:before{
+			content: '';
+			position: absolute;
+			display: block;
+			top: 1.5em; right: 4em;
+			width: 90px; height: 15px;
+			background: url('../images/icon_top_work.png') no-repeat;
+			background-size: contain;
+		}
+
+		// SPAN
+		span{
+			color: #333333;
+			border-color: $color_id1;
+		}
+	}
+
+
+	article{
+		position: relative;
+        overflow: hidden;
+		max-height: 0px;
+
+		background: #5b83e1; /* Old browsers */
+		background: -moz-linear-gradient(-45deg, #5b83e1 0%, #dd1cfa 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(-45deg, #5b83e1 0%,#dd1cfa 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(135deg, #5b83e1 0%,#dd1cfa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b83e1', endColorstr='#dd1cfa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+		transition: max-height .6s ease-in-out;
+
+		&.active{
+			max-height: 300vh;
+		}
+
+		$close_btn_size: 60px;
+
+		.content_holder{
+			padding: 3em 0 4.5em;
+		}
+
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0; bottom: 0;
+			width: 0;
+			height: 0;
+			border-left: $close_btn_size solid #fff;
+			border-top: $close_btn_size solid transparent;
+		}
+
+		a.close_btn{
+			display: block;
+			position: absolute;
+			top: 0; right: 0;
+			width: $close_btn_size;
+			cursor: pointer;
+
+			transition: all .12s ease;
+
+			&:hover{
+				width: ($close_btn_size+15);
+
+				&:before{
+					border-top: ($close_btn_size+15) solid #fff;
+					border-left: ($close_btn_size+15) solid transparent;
+				}
+				&:after{
+					transform: rotate(-135deg);
+				}
+			}
+
+			&:after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 13%; right: 14%;
+				width: 32%;
+				padding-bottom: 32%;
+				background: url('../images/icon_plus.svg') no-repeat;
+				background-size: contain;
+				transform: rotate(45deg);
+				transform-origin: center center;
+				transform-style: preserve-3D;
+
+				transition: all .2s ease;
+			}
+
+			&:before{
+				content: '';
+				display: block;
+				position: relative;
+				width: 0;
+				height: 0;
+				border-top: $close_btn_size solid #fff;
+				border-left: $close_btn_size solid transparent;
+
+				transition: all .12s ease;
+			}
+		}
+
+
+		.index_holder{
+			span{
+				color: #9ab5ff;
+				border-color: $color_id1;
+			}
+		}
+
+
+		.info{
+			margin-bottom: 2em;
+
+			h2{
+				color: #fff;
+				font-size: 1.75em;
+				text-transform: none;
+				font-weight: normal;
+				margin-bottom: 0px;
+			}
+			h3{
+				color: $color_id1;
+				font-size: 1.5em;
+				text-transform: none;
+				font-style: italic;
+				font-weight: bold;
+			}
+
+
+			.content{
+				padding: 1em 0
+			}
+		}
+
+		.gallery{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+
+	.info_holder{
+		position: relative;
+
+		ul{
+			position: relative;
+			list-style: none;
+			margin:  0; padding:  0;
+
+			li{
+				position: relative;
+				overflow: hidden;
+				text-align: center;
+				text-transform: uppercase;
+
+				&:hover{
+					.title{
+						background: rgba(0,0,0, .74);
+
+						.name{
+							//font-size: 1.24em
+						}
+
+						.icon{
+							width: 15%;
+						}
+					}
+					.photo{
+						a{
+							width: 104%;
+							height: 104%;
+						}
+					}
+				}
+
+				h3{
+					font-family: 'Roboto', sans-serif;
+					font-weight: 300;
+					font-size: 1.12em
+				}
+
+				.photo{
+					position: relative;
+					width: 100%;
+					
+					&:before{
+						content:  '';
+						display: block;
+						position: relative;
+						width: 100%;
+						padding-bottom: 78.9583333333%;
+					}
+
+					a{
+						position: absolute;
+						display: block;
+						top:  50%; left: 50%;
+						transform: translate(-50%, -50%);
+						width: 100%;
+						height:  100%;
+
+						transition: all .2s cubic-bezier(0.42,0,0.58,1);
+					}
+					img{
+						width: 100%;
+						height: auto;
+					}
+				}
+
+				.title{
+					background: rgba(0,0,0,.5);
+					position: absolute;
+					top: 0; left: 0;
+					width: 100%; height: 100%;
+					transition: background .2s ease;
+
+					a{
+						display: block;
+						cursor: pointer;
+						width: 100%; height:  100%;
+
+						span.name{
+							position: absolute;
+							display: inline-block;
+							top: 50%; left: 50%;
+							transform: translate(-50%, -50%);
+							margin: auto;
+							padding: 0 50px;
+							font-weight: normal;
+							font-size: 1.1em;
+
+							&:before, 
+							&:after{
+								content:  '';
+								display: block;
+								position: absolute;
+								top:  50%;
+								transform: translateY(-50%);
+								width: 30px;
+								height: 2px;
+								background: #fff;
+							}
+							&:before{
+								left: 0;
+							}
+							&:after{
+								right: 0;
+							}
+						}
+
+						span.icon{
+							position: absolute;
+							display: block;
+							bottom: 0; right: 0;
+							width: 10%;
+							background: url('../images/icon_more.svg') right bottom no-repeat;
+							background-size: contain;
+
+							transition: all .12s ease-in-out;
+
+							&:before{
+								content:  '';
+								display: block;
+								position: relative;
+								width: 100%;
+								padding-bottom: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+	@media screen and ( min-width: 500px ){
+		.info_holder {
+			ul{
+				@include clearfix;
+
+				li{
+					float: left;
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	@media screen and ( min-width: 768px ){
+		.info_holder {
+			ul{
+				li{
+					width: 33.333%;
+				}
+			}
+		}
+	}
+
+	@media screen and ( min-width: 1024px ){
+		min-height: 100vh;
+		height: auto;
+
+		article{
+			height: 100vh;
+			@include clearfix;
+
+			.info{
+				float: left;
+				width: 40%
+			}
+
+			.gallery{
+				margin-left: 40%;
+			}
+		}
+	}
+}

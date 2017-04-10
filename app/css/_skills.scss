@@ -1,0 +1,277 @@
+
+section#skills{
+	color:  #FFF;
+	background: #000;
+	background-image: url('../images/skills_background.png');
+	background-position: center;
+
+	////////////////////////
+	// ICON TOP
+	&:before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 2em; right: 1em;
+		width: 20px; height: 51px;
+		background: url('../images/icon_top_skills.png') no-repeat;
+		background-size: contain;
+	}
+
+
+
+	.index_holder{
+		// SPAN
+		span{
+			color: #333333;
+			border-color: $color_id2;
+		}
+	}
+
+
+	
+	@keyframes border{
+	  0% {
+	    box-shadow: 60px -60px 0 2px $color_id1, -60px -60px 0 2px $color_id1, -60px 60px 0 2px $color_id1, 60px 60px 0 2px $color_id1, 0 0 0 2px #E94E3D;
+	  }
+	  25% {
+	    box-shadow: 0 -125px 0 2px $color_id1, -60px -60px 0 2px $color_id1, -60px 60px 0 2px $color_id1, 60px 60px 0 2px $color_id1, 0 0 0 2px #fff;
+	  }
+	  50% {
+	    box-shadow: 0 -125px 0 2px $color_id1, -125px 0px 0 2px $color_id1, -60px 60px 0 2px $color_id1, 60px 60px 0 2px $color_id1, 0 0 0 2px #fff;
+	  }
+	  75% {
+	    box-shadow: 0 -125px 0 2px $color_id1, -125px 0px 0 2px $color_id1, 0px 125px 0 2px $color_id1, 60px 60px 0 2px $color_id1, 0 0 0 2px #fff;
+	  }
+	  100% {
+	    box-shadow: 0 -125px 0 2px $color_id1, -125px 0px 0 2px $color_id1, 0px 125px 0 2px $color_id1, 120px 40px 0 2px $color_id1, 0 0 0 2px #fff;
+	  } 
+	}
+
+
+	.info_holder{
+		position: relative;
+
+		ul{
+			position: relative;
+			list-style: none;
+			margin:  0; padding:  0;
+
+			li{
+				position: relative;
+				text-align: center;
+				margin-bottom: 3em;
+
+				h3{
+					font-family: 'Roboto', sans-serif;
+					font-weight: 300;
+					font-size: .875em
+				}
+
+
+				.icon_holder{
+					position: relative;
+					margin: 0 auto 1em;
+					max-width: 120px;
+					width: 100%;
+
+					&:before{
+						content: '';
+						display: block;
+						position: relative;
+						width: 100%;
+						padding-bottom: 100%;
+					}
+
+					.icon{
+						position: absolute;
+						z-index: 1;
+						margin: auto;
+						top: 0; left: 0;
+						bottom: 0; right: 0;
+						width: 87%;
+						color: #333;
+
+						&:before{
+							content: '';
+							display: block;
+							position: absolute;
+							z-index: -1;
+							top: 50%;
+							transform: translateY(-50%);
+						    background: #000 url('../images/icon_creatividad.svg') no-repeat center;
+						    background-size: 50%;
+						    border-radius: 50%;
+						    width: 100%;
+						    padding-bottom: 100%;
+						}
+					}
+
+					&.concept{
+						.icon{
+							&:before{
+							    background-image: url('../images/icon_creatividad.svg');
+							}
+						}
+					}
+					&.strategy{
+						.icon{
+							&:before{
+							    background-image: url('../images/icon_estrategia.svg');
+							}
+						}
+					}
+					&.content{
+						.icon{
+							&:before{
+							    background-image: url('../images/icon_contenido.svg');
+							}
+						}
+					}
+					&.clients{
+						.icon{
+							&:before{
+							    background-image: url('../images/icon_clientes.svg');
+							}
+						}
+					}
+					&.art{
+						.icon{
+							&:before{
+							    background-image: url('../images/icon_arte.svg');
+							}
+						}
+
+						svg {
+						    background: #2c0a31;
+
+							circle{
+							    fill: $color_id1;
+							    stroke: $color_id1;
+							}
+						}
+					}
+					&.writing{
+						.icon{
+							&:before{
+							    background-image: url('../images/icon_redaccion.svg');
+							}
+						}
+
+						svg {
+						    background: #2c0a31;
+
+							circle{
+							    fill: $color_id1;
+							    stroke: $color_id1;
+							}
+						}
+					}
+					&.ux{
+						.icon{
+							&:before{
+							    background-image: url('../images/icon_ux.svg');
+							}
+						}
+
+						svg {
+						    background: #2c0a31;
+
+							circle{
+							    fill: $color_id1;
+							    stroke: $color_id1;
+							}
+						}
+					}
+					&.social{
+						.icon{
+							&:before{
+							    background-image: url('../images/icon_redesSociales.svg');
+							}
+						}
+
+						svg {
+						    background: #2c0a31;
+
+							circle{
+							    fill: $color_id1;
+							    stroke: $color_id1;
+							}
+						}
+					}
+
+					svg {
+						position: absolute;
+						top: 0; left:  0;
+					    transform: rotate(-90deg);
+					    color: #333;
+					    background: #100732;
+					    border-radius: 50%;
+					    width: 100%;
+
+						circle{
+						    fill: $color_id2;
+						    stroke: $color_id2;
+						    stroke-width: 50;
+						    stroke-dasharray: 0 158; 
+						    transition:stroke-dasharray 2s;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+	@media screen and ( min-width: 460px ){
+		.info_holder{
+			ul{
+				@include clearfix;
+
+				li{
+					float: left;
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	@media screen and ( min-width: 600px ){
+		.info_holder{
+			ul{
+				li{
+					.icon_holder{
+						max-width: 170px;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and ( min-width: 720px ){
+		.info_holder{
+			ul{
+				li{
+					width: 33.333%;
+				}
+			}
+		}
+	}
+
+	@media screen and ( min-width: 1024px ){
+		min-height: 100vh;
+		height: auto;
+
+		.info_holder{
+			ul{
+				li{
+					width: 25%;
+
+					.icon_holder{
+						max-width: 160px;
+					}
+				}
+			}
+		}
+	}
+}

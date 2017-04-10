@@ -1,0 +1,146 @@
+
+footer{
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 260px;
+	min-height: 100vh;
+	color:  #fff;
+	background: #fff url('../images/footer_background.gif') center bottom;
+
+	.index_holder{
+		// ICON TOP
+		&:before{
+			content: '';
+			position: absolute;
+			display: block;
+			top: 1.5em; right: 4em;
+			width: 109px; height: 111px;
+			background: url('../images/icon_top_contact.png') no-repeat;
+			background-size: contain;
+		}
+
+		// SPAN
+		span{
+			color: #333333;
+			border-color: $color_id2;
+		}
+	}
+
+	.info_holder{
+		text-align:  center;
+
+		ul{
+			position: relative;
+			margin: 0 auto; padding: 0;
+			list-style: none;
+
+			li{
+				position: relative;
+				display: inline-block;
+				margin: 0 5px;
+				padding: 0;
+				width: 45px;
+
+
+				a{
+					position: relative;
+					display: block;
+					overflow: hidden;
+					border: 0;
+					border-radius: 50%;
+					width: 100%;
+
+					font: 0/0 a;
+					color: transparent;
+					text-shadow: none;
+					background-color: transparent;
+
+					&:hover{
+						&:after{
+							width: 0;
+							padding-bottom: 0;
+						}
+
+						svg{
+							stroke: #000;
+							fill: #000;
+							width: 55%;
+							height: 55%;
+						}
+					}
+
+					&:before{
+						content: '';
+						display: block;
+						position: relative;
+						width: 100%;
+						padding-bottom: 100%;
+
+						background: #8364e9; /* Old browsers */
+						background: -moz-linear-gradient(left, #8364e9 0%, #5687e0 100%); /* FF3.6-15 */
+						background: -webkit-linear-gradient(left, #8364e9 0%,#5687e0 100%); /* Chrome10-25,Safari5.1-6 */
+						background: linear-gradient(to right, #8364e9 0%,#5687e0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8364e9', endColorstr='#5687e0',GradientType=1 ); /* IE6-9 */
+					
+					}
+					&:after{
+						content: '';
+						display: block;
+						position: absolute;
+						top: 50%; left: 50%;
+						transform: translate(-50%, -50%);
+						width: 95%;
+						padding-bottom: 95%;
+						border-radius: 50%;
+						background: #000;
+
+						transition: all .22s cubic-bezier(0.25,0.1,0.25,1)
+					}
+
+					svg{
+						position: absolute;
+						top: 50%; left: 50%;
+						transform: translate(-50%, -50%);
+						width: 50%;
+						height: 50%;
+						z-index: 1;
+						stroke: url('#social_icon_background');
+						fill: url('#social_icon_background');
+
+						transition: all .25s cubic-bezier(0.1, 0.885, 0.32, 1.9)
+					}
+
+				}
+			}
+		}
+	}
+
+
+	.logo_holder{
+		position: absolute;
+		bottom: 1.25em; left: 50%;
+		transform: translateX(-50%);
+		width: 60%;
+		max-width: 160px;
+		margin: 0 auto;
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		top:  0; left: 50%;
+		transform: translateX(-50%);
+		width: 0; 
+		height: 0; 
+		border-left: 1000px solid transparent;
+		border-right: 1000px solid transparent;
+		border-top: 560px solid #000;
+	}
+}
