@@ -124,33 +124,37 @@ RatingComponent.propTypes = {
 /*------------------------------------------------
 	ABOUT COMPONENT
 ------------------------------------------------*/
-const About = () => (
-	<section id="about">
-		<div className="wrap_center">
-			<div className="index_holder">
-				<span>00</span>
-				<h4 className="index">Bienvenid@</h4>
-			</div>
+const About = React.createClass({
+  render: function(){
+    return(
+    	<section id="about">
+    		<div className="wrap_center">
+    			<div className="index_holder">
+    				<span>00</span>
+    				<h4 className="index">Bienvenid@</h4>
+    			</div>
 
-			<div className="info_holder">
-				<div className="perfil">
-					<h1>Hola! soy Ingrid_</h1>
-					<p>Creativo publicitario, predicadora de historias, apasionada de la estética, redactora entusiasta, groupie de coders, trotamundos y yoguini sin doctrina.</p>
-					<p>Nací en los 80’s entre arte ecléctico, spray y sintetizadores, formo parte de una generación analógica-digital que se cree millenial pero godinea.</p>
-					<p>En mis ocho años de carrera profesional, mi experiencia se ha adaptado a las distintas tendencias emergentes, desarrollando las habilidades multidisciplinarias, que me han permitido participar activamente desde la concepción y planeación estratégica de una idea, hasta su producción e implementación.</p>
-				</div>
+    			<div className="info_holder">
+    				<div className="perfil">
+    					<h1>Hola! soy Ingrid_</h1>
+    					<p>Creativo publicitario, predicadora de historias, apasionada de la estética, redactora entusiasta, groupie de coders, trotamundos y yoguini sin doctrina.</p>
+    					<p>Nací en los 80’s entre arte ecléctico, spray y sintetizadores, formo parte de una generación analógica-digital que se cree millenial pero godinea.</p>
+    					<p>En mis ocho años de carrera profesional, mi experiencia se ha adaptado a las distintas tendencias emergentes, desarrollando las habilidades multidisciplinarias, que me han permitido participar activamente desde la concepción y planeación estratégica de una idea, hasta su producción e implementación.</p>
+    				</div>
 
-				<div className="photo">
-					<img src={require("../images/ingrid_ocana.png")} alt="Ingrid Ocana Photo" />
-		
-					<div>
-						<h2>Ingrid</h2>
-						<RatingComponent rating={4.343} />
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-);
+    				<div className="photo">
+    					<img src={require("../images/ingrid_ocana.png")} alt="Ingrid Ocana Photo" />
+    		
+    					<div>
+    						<h2>Ingrid</h2>
+    						<RatingComponent rating={4.343} />
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    )
+  }
+});
 
 export default About;

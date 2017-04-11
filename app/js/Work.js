@@ -105,7 +105,7 @@ var Work = React.createClass({
 
 		// Load Projects List
 		const url = `${window.location.href}projects.json`;
-		//var req = new Request('../projects.jsons'); 
+		console.log(__dirname, path.resolve(__dirname, 'projects.json')) 
 		axios.get('./projects.json').then(function(_response){
 			return _response.data;
 		}).then( function(_projectsList){
@@ -116,7 +116,6 @@ var Work = React.createClass({
 	},
 
 	showDetails: function(_id){
-		console.log(_id)
 		var scope = this;
 		var pageScroll = window.pageYOffset || document.documentElement.scrollTop;
 		var work_list = this.workSection.getElementsByTagName('ul')[0].getBoundingClientRect();

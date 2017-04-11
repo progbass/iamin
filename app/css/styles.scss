@@ -11,9 +11,9 @@ $color_id2: #5023fa;
 
 
 html{
-	background: #000;
 }
 body{
+	background: #000;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 }
@@ -34,9 +34,6 @@ a.active{
 	color:  #000;
 }
 
-#icon_star_holder{
-	//display: none;
-}
 
 .wrap_center{
 	position: relative;
@@ -78,6 +75,71 @@ a.active{
 }
 
 
+
+@keyframes preloader_animation{
+	0%{ width: 0% }
+	40%{ width: 100% }
+	60%{ width: 100% }
+	100%{ width: 0% }
+}
+#preloader{
+	position: absolute;
+	top: 50%; left: 50%;
+	width: 200px;
+	height: 10px;
+	transform: rotate(-45deg) translate(-50%, -50%);
+	transform-origin: center;
+	
+	span{
+		position: relative;
+		//float: left;
+		display: block;
+		height: 100%;
+		margin: 5px auto;
+		//overflow: hidden;
+		border-radius: 20px;
+		
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			width: 0%;
+			height: 100%;
+			top: 0; left: 0;
+			border-radius: 20px;
+			box-shadow:
+        inset 0 0 50px #fff,      /* inner white */
+        inset 20px 0 80px #f0f,   /* inner left magenta short */
+        inset -20px 0 80px #0ff,  /* inner right cyan short */
+        inset 20px 0 300px #f0f,  /* inner left magenta broad */
+        inset -20px 0 300px #0ff, /* inner right cyan broad */
+        0 0 50px #fff,            /* outer white */
+        -10px 0 40px #dd31f8,        /* outer left magenta */
+        10px 0 80px #f0f;         /* outer right cyan */
+		}
+		
+		&:nth-child(1){
+			width: 35%;
+			&:before{
+				animation: preloader_animation 2s ease-in .0s infinite alternate;
+			}
+		}
+		&:nth-child(2){
+			width: 15%;
+			&:before{
+				animation: preloader_animation 1.5s ease-in .6s infinite alternate;
+			}
+		}
+		&:nth-child(3){
+			width: 50%;
+			&:before{
+				animation: preloader_animation 2s ease-in 1s infinite alternate;
+			}
+		}
+	}
+}
+
+
 header, section, footer{
 	position: relative;
 	padding: 2em 0;
@@ -88,6 +150,8 @@ header, section, footer{
 		//padding: 0
 	}
 }
+
+
 
 
 @import 'header';

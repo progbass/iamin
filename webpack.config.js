@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var nodeModules = {};
 fs.readdirSync('node_modules')
@@ -23,6 +24,7 @@ module.exports = {
 	},
     devtool: "source-map", // any "source-map"-like devtool is possible
     plugins: [
+    	new ExtractTextPlugin("./styles.css"),
     	new HtmlWebpackPlugin({ template: './index.html' }),
     	new CopyWebpackPlugin([{ from: './projects.json' }])
     ],
@@ -32,19 +34,12 @@ module.exports = {
 			exclude: /node_modules/,
 			loader: ['react-hot-loader/webpack', 'babel-loader']
 		}, {
-			test: /\.(css|scss)$/i,
-            use: [{
-                loader: "style-loader" // creates style nodes from JS strings
-            }, {
-                loader: "css-loader", options: {
-                    sourceMap: true
-                } // translates CSS into CommonJS
-            }, {
-                loader: "sass-loader", options: {
-                    sourceMap: true
-                } // compiles Sass to CSS
-            }]
-
+			test: /\.(css|scss)$/,
+	        use: ExtractTextPlugin.extract({
+	          fallback: 'style-loader',
+	          //resolve-url-loader may be chained before sass-loader if necessary
+	          use: ['css-loader', 'sass-loader']
+	        })
 
 		}, {
 			test: /\.(jpe?g|png|gif|svg)$/i,
