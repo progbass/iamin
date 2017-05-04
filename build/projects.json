@@ -5,7 +5,11 @@
       "thumb": "fuze.jpg",
       "client": "Fuze Tea",
       "date": "02.05",
-      "photo": "fuze.png",
+      "gallery": [
+        "fuze1.jpg",
+        "fuze2.jpg",
+        "fuze3.jpg"
+      ],
       "content": "En esta campaña se transmitió el concepto ”Cuando dos cosas se juntan el resultado es aún mejor” a través de impactantes piezas de display que generaron interacción y awareness de la campaña.\nParticipé desarrollando los conceptos de las piezas, el diseño de la experiencia de usuario y el diseño visual."
     },
     {
@@ -13,7 +17,9 @@
       "thumb": "erikKennon.jpg",
       "client": "Food Show",
       "date": "02.05",
-      "photo": "erik.png",
+      "gallery": [
+        "erik.mp4"
+      ],
       "content": "El reto de esta campaña fue demostrar que los mexicanos somos los aficionados más optimistas del mundo. Para recopilar todo el apoyo de los mexicanos a la selección, se desarrolló una plataforma responsiva. Para esta plataforma elaboré la arquitectura de información, los wireframes del sitio, di dirección artística en la elaboración del diseño de interfaz y desarrollé la propuesta de de comunicación de la campaña de display."
     },
     {
@@ -21,7 +27,11 @@
       "thumb": "transformadora.jpg",
       "client": "Ciel",
       "date": "02.05",
-      "photo": "transformadora.png",
+      "gallery": [
+        "ciel1.jpg",
+        "ciel2.jpg",
+        "ciel3.jpg"
+      ],
       "content": "Pequeñas acciones hacen grandes transformaciones, bajo este insight se creó el concepto de Tranformadora, una plataforma de crowdfunding para fondear proyectos sustentables en la cuál Ciel, se convirtió en promotor de ideas.\nRealizé la planeación de la plataforma, desde la arquitectura de información, producción de wireframes, iconografía, hasta el diseño de su interfaz."
     },
     {
@@ -29,7 +39,11 @@
       "thumb": "secciones.jpg",
       "client": "Master Chef",
       "date": "02.05",
-      "photo": "masterChef.png",
+      "gallery": [
+        "masterChef.png",
+        "masterChef.png",
+        "masterChef.png"
+      ],
       "content": "El éxitoso show de cocina de TV Azteca fortalece cada una de sus temporadas con contenido exclusivo digital que complementa la experiencia de las audiencias que buscan todo lo que tenga que ver con el programa.\nPara la segunda temporada de adultos trabajé en las propuestas de un juego interactivo de recetas y las secciones de “Ponle Crema a Tus Tacos”, “El Recalentado” y “La Flor de México”."
     },
     {
@@ -37,7 +51,11 @@
       "thumb": "worldCup.jpg",
       "client": "Coca-Cola",
       "date": "02.05",
-      "photo": "worldCup.png",
+      "gallery": [
+        "worldCup1.jpg",
+        "worldCup2.jpg",
+        "worldCup3.jpg"
+      ],
       "content": "El reto de esta campaña fue demostrar que los mexicanos somos los aficionados más optimistas del mundo.\nPara recopilar todo el apoyo de los mexicanos a la selección, se desarrolló una plataforma responsiva.\nPara esta plataforma elaboré la arquitectura de información, los wireframes del sitio, di dirección artística en la elaboración del diseño de interfaz y desarrollé la propuesta de de comunicación de la campaña de display."
     },
     {
@@ -45,7 +63,11 @@
       "thumb": "playbox.jpg",
       "client": "Fanta",
       "date": "02.05",
-      "photo": "playbox.png",
+      "gallery": [
+        "fanta1.jpg",
+        "fanta2.jpg",
+        "fanta3.jpg"
+      ],
       "content": "Durante años Fanta ha construído sobre el concepto de “diversión” con éxito, sin embargo en un terreno tan competido hacía falta renovarse. Fue así como se decidió desarrollar una plataforma de juegos para móviles y ordenadores que permitiera llevar la diversión a donde sea.\nParticipé en esta campaña desarrollando los conceptos de los juegos, la iconografía de las insignias y logros,  la arquitectura de información y los wireframes de la plataforma."
     }
   ]

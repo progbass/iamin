@@ -138,7 +138,6 @@ const About = React.createClass({
     				<div className="perfil">
     					<h1>Hola! soy Ingrid_</h1>
     					<p>Creativo publicitario, predicadora de historias, apasionada de la estética, redactora entusiasta, groupie de coders, trotamundos y yoguini sin doctrina.</p>
-    					<p>Nací en los 80’s entre arte ecléctico, spray y sintetizadores, formo parte de una generación analógica-digital que se cree millenial pero godinea.</p>
     					<p>En mis ocho años de carrera profesional, mi experiencia se ha adaptado a las distintas tendencias emergentes, desarrollando las habilidades multidisciplinarias, que me han permitido participar activamente desde la concepción y planeación estratégica de una idea, hasta su producción e implementación.</p>
     				</div>
 

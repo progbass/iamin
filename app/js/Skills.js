@@ -1,6 +1,53 @@
 //
 import React from 'react';
 
+// DATA
+var skills_arr = [
+  {
+    name: "Conceptualización",
+    score: 85,
+    class: 'concept'
+  },
+  {
+    name: "Estrategia Digital",
+    score: 70,
+    class: 'strategy'
+  },
+  {
+    name: "Marketing de Contenidos",
+    score: 65,
+    class: 'content'
+  },
+  {
+    name: "Presentación a Clientes",
+    score: 70,
+    class: 'clients'
+  },
+  {
+    name: "Dirección de Arte",
+    score: 90,
+    class: 'art'
+  },
+  {
+    name: "Redacción",
+    score: 50,
+    class: 'writing'
+  },
+  {
+    name: "UX / UI",
+    score: 70,
+    class: 'ux'
+  },
+  {
+    name: "Redes Sociales",
+    score: 70,
+    class: 'social'
+  },
+];
+
+
+
+
 
 /*------------------------------------------------
   RADIAL METER COMPONENT
@@ -9,8 +56,12 @@ class RadialMeter extends React.Component {
   constructor(props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
+    this.animateMeter = this.animateMeter.bind(this);
     this.class = this.props.className;
     this.state = {percent: this.props.percent};
+    this.animationDelay = this.props.delay || 0;
+    this.delayTimeOut = 0;
+    console.log(this.animationDelay)
   }
 
   componentDidMount(){
@@ -18,6 +69,7 @@ class RadialMeter extends React.Component {
   }
   componentWillUnmount(){
     window.removeEventListener('scroll', this.handleScroll, false);
+    clearTimeout(this.delayTimeOut);
   }
 
   handleScroll(event){
@@ -29,7 +81,7 @@ class RadialMeter extends React.Component {
 
     if(work_list.top < (window.innerHeight - work_list.height) - 30){
       window.removeEventListener('scroll', this.handleScroll, false);
-      this.animateMeter();
+      this.delayTimeOut = setTimeout(this.animateMeter, this.animationDelay);
     }
   }
 
@@ -56,53 +108,10 @@ class RadialMeter extends React.Component {
   }
 }
 RadialMeter.propTypes = {
-  percent: React.PropTypes.number.isRequired
+  percent: React.PropTypes.number.isRequired,
+  delay: React.PropTypes.number
 }
 
-
-
-var skills_arr = [
-  {
-    name: "Conceptualización",
-    score: 71,
-    class: 'concept'
-  },
-  {
-    name: "Estrategia Digital",
-    score: 85,
-    class: 'strategy'
-  },
-  {
-    name: "Marketing de Contenidos",
-    score: 70,
-    class: 'content'
-  },
-  {
-    name: "Presentación a Clientes",
-    score: 90,
-    class: 'clients'
-  },
-  {
-    name: "Dirección de Arte",
-    score: 75,
-    class: 'art'
-  },
-  {
-    name: "Redacción",
-    score: 80,
-    class: 'writing'
-  },
-  {
-    name: "UX / UI",
-    score: 75,
-    class: 'ux'
-  },
-  {
-    name: "Redes Sociales",
-    score: 80,
-    class: 'social'
-  },
-];
 
 
 

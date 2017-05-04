@@ -18,7 +18,7 @@ const Footer = React.createClass({
 
 						<ul className="social_list">
 							<li>
-								<a href="#" className="mail">
+								<a href="mailto:ingrid.ocana@gmail.com" className="mail">
 									Mail
 									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.5 33.667" >
 										<g>
@@ -32,7 +32,7 @@ const Footer = React.createClass({
 								</a>
 							</li>
 							<li>
-								<a href="#" className="linkedin">
+								<a href="https://www.linkedin.com/in/ingridocana/" className="linkedin">
 									LinkedIn
 									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45" >
 										<g>
@@ -54,7 +54,7 @@ const Footer = React.createClass({
 								</a>
 							</li>
 							<li>
-								<a href="#" className="behance">
+								<a href="https://www.behance.net/monocromatik" className="behance">
 									Behance
 									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 39" >
 										<g>
@@ -86,7 +86,7 @@ const Footer = React.createClass({
 								</a>
 							</li>
 							<li>
-								<a href="#" className="instagram">
+								<a href="https://www.instagram.com/monocromatik/" className="instagram">
 									Instagram
 									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" >
 										<g>

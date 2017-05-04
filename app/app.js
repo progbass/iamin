@@ -15,8 +15,6 @@ import Footer from './js/Footer';
 var scroll = Scroll.animateScroll;
 var scroll_events = Scroll.Events;
 
-
-
 /*------------------------------------------------
 	WORK DETAIL COMPONENT
 ------------------------------------------------*/
